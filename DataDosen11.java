@@ -12,7 +12,8 @@ public class DataDosen11 {
         }
 
         for (int i = 0; i < arrayOfDosen.length; i++) {
-            System.out.println((i + 1) + ". " + arrayOfDosen[i].toString());
+            Dosen11 dosen = arrayOfDosen[i];
+            System.out.println((i + 1) + ". NIP: " + dosen.nip + ", Nama: " + dosen.nama + ", Jenis Kelamin: " + dosen.jenisKelamin + ", Usia: " + dosen.usia);
         }
         System.out.println("");
     }
@@ -32,9 +33,9 @@ public class DataDosen11 {
         int jumlahWanita = 0;
 
         for (Dosen11 dosen : arrayOfDosen) {
-            if (dosen.getJenisKelamin().equalsIgnoreCase("Pria")) {
+            if (dosen.jenisKelamin.equalsIgnoreCase("Pria")) {
                 jumlahPria++;
-            } else if (dosen.getJenisKelamin().equalsIgnoreCase("Wanita")) {
+            } else if (dosen.jenisKelamin.equalsIgnoreCase("Wanita")) {
                 jumlahWanita++;
             }
         }
@@ -61,11 +62,11 @@ public class DataDosen11 {
         int jumlahWanita = 0;
 
         for (Dosen11 dosen : arrayOfDosen) {
-            if (dosen.getJenisKelamin().equalsIgnoreCase("Pria")) {
-                totalUsiaPria += dosen.getUsia();
+            if (dosen.jenisKelamin.equalsIgnoreCase("Pria")) {
+                totalUsiaPria += dosen.usia;
                 jumlahPria++;
-            } else if (dosen.getJenisKelamin().equalsIgnoreCase("Wanita")) {
-                totalUsiaWanita += dosen.getUsia();
+            } else if (dosen.jenisKelamin.equalsIgnoreCase("Wanita")) {
+                totalUsiaWanita += dosen.usia;
                 jumlahWanita++;
             }
         }
@@ -99,12 +100,12 @@ public class DataDosen11 {
 
         Dosen11 dosenPalingTua = arrayOfDosen[0];
         for (int i = 1; i < arrayOfDosen.length; i++) {
-            if (arrayOfDosen[i].getUsia() > dosenPalingTua.getUsia()) {
+            if (arrayOfDosen[i].usia > dosenPalingTua.usia) {
                 dosenPalingTua = arrayOfDosen[i];
             }
         }
 
-        System.out.println(dosenPalingTua.toString());
+        System.out.println("NIP: " + dosenPalingTua.nip + ", Nama: " + dosenPalingTua.nama + ", Jenis Kelamin: " + dosenPalingTua.jenisKelamin + ", Usia: " + dosenPalingTua.usia);
         System.out.println("");
     }
 
@@ -121,12 +122,12 @@ public class DataDosen11 {
 
         Dosen11 dosenPalingMuda = arrayOfDosen[0];
         for (int i = 1; i < arrayOfDosen.length; i++) {
-            if (arrayOfDosen[i].getUsia() < dosenPalingMuda.getUsia()) {
+            if (arrayOfDosen[i].usia < dosenPalingMuda.usia) {
                 dosenPalingMuda = arrayOfDosen[i];
             }
         }
 
-        System.out.println(dosenPalingMuda.toString());
+        System.out.println("NIP: " + dosenPalingMuda.nip + ", Nama: " + dosenPalingMuda.nama + ", Jenis Kelamin: " + dosenPalingMuda.jenisKelamin + ", Usia: " + dosenPalingMuda.usia);
         System.out.println("");
     }
 }
