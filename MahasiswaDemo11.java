@@ -8,6 +8,8 @@ public class MahasiswaDemo11 {
         Mahasiswa11[] arrayOfMahasiswa = new Mahasiswa11[3];
         String dummy;
         
+
+
       for (int i = 0; i < 3; i++) {
             arrayOfMahasiswa[i] = new Mahasiswa11();
 
@@ -26,10 +28,13 @@ public class MahasiswaDemo11 {
 
         for (int i = 0; i < 3; i++) {
             System.out.println("\nData Mahasiswa ke-" + (i + 1));
-            System.out.println("NIM: " + arrayOfMahasiswa[i].nim);
-            System.out.println("Nama: " + arrayOfMahasiswa[i].nama);
-            System.out.println("Kelas: " + arrayOfMahasiswa[i].kelas);
-            System.out.println("IPK: " + arrayOfMahasiswa[i].ipk);
+            // System.out.println("NIM: " + arrayOfMahasiswa[i].nim);
+            // System.out.println("Nama: " + arrayOfMahasiswa[i].nama);
+            // System.out.println("Kelas: " + arrayOfMahasiswa[i].kelas);
+            // System.out.println("IPK: " + arrayOfMahasiswa[i].ipk);
+            
+            arrayOfMahasiswa[i].tampilkanInfo();
+            
             System.out.println("-----------------------------");
         }
         input.close();
