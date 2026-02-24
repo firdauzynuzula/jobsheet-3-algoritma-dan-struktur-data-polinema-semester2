@@ -35,10 +35,6 @@ public class MahasiswaDemo11 {
         input.close();
 
 
-        // Mahasiswa[] myarrayOfMahasiswa = new Mahasiswa[3];
-        // myarrayOfMahasiswa[0].nim = "123456";
-        // myarrayOfMahasiswa[1].nama = "Budi";
-        // myarrayOfMahasiswa[2].kelas = "A";
-        // myarrayOfMahasiswa[2].ipk = (float) 3.75;
+     
     }
 }
