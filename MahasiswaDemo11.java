@@ -1,47 +1,44 @@
+import java.util.Scanner;
+
 public class MahasiswaDemo11 {
 
     public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
         Mahasiswa11[] arrayOfMahasiswa = new Mahasiswa11[3];
-
+        String dummy;
         
-        arrayOfMahasiswa[0] = new Mahasiswa11();
-        arrayOfMahasiswa[0].nim = "244107060033";
-        arrayOfMahasiswa[0].nama = "AGNES TINTANIA KINANTI";
-        arrayOfMahasiswa[0].kelas = "SIB-1E";
-        arrayOfMahasiswa[0].ipk = (float) 3.75;
+      for (int i = 0; i < 3; i++) {
+            arrayOfMahasiswa[i] = new Mahasiswa11();
+
+            System.out.println("Masukkan data untuk Mahasiswa ke-" + (i + 1));
+            System.out.print("Masukkan NIM: ");
+            arrayOfMahasiswa[i].nim = input.nextLine();
+            System.out.print("Masukkan Nama: ");
+            arrayOfMahasiswa[i].nama = input.nextLine();
+            System.out.print("Masukkan Kelas: ");
+            arrayOfMahasiswa[i].kelas = input.nextLine();
+            System.out.print("Masukkan IPK: ");
+            dummy = input.nextLine(); 
+            arrayOfMahasiswa[i].ipk = Float.parseFloat(dummy);
+            System.out.println("-----------------------------");
+        }
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("\nData Mahasiswa ke-" + (i + 1));
+            System.out.println("NIM: " + arrayOfMahasiswa[i].nim);
+            System.out.println("Nama: " + arrayOfMahasiswa[i].nama);
+            System.out.println("Kelas: " + arrayOfMahasiswa[i].kelas);
+            System.out.println("IPK: " + arrayOfMahasiswa[i].ipk);
+            System.out.println("-----------------------------");
+        }
+        input.close();
 
 
-        
-        arrayOfMahasiswa[1] = new Mahasiswa11();
-        arrayOfMahasiswa[1].nim = "244107060034";
-        arrayOfMahasiswa[1].nama = "BENNY KURNIAWAN";
-        arrayOfMahasiswa[1].kelas = "SIB-1E";
-        arrayOfMahasiswa[1].ipk = (float) 3.80;
-
-
-        
-        arrayOfMahasiswa[2] = new Mahasiswa11();
-        arrayOfMahasiswa[2].nim = "244107060035";
-        arrayOfMahasiswa[2].nama = "CINDY PUTRI";
-        arrayOfMahasiswa[2].kelas = "SIB-1E";
-        arrayOfMahasiswa[2].ipk = (float) 3.90;
-
-
-        System.out.println("------------------------------");
-        System.out.println("NIM: " + arrayOfMahasiswa[0].nim);
-        System.out.println("Nama: " + arrayOfMahasiswa[0].nama);
-        System.out.println("Kelas: " + arrayOfMahasiswa[0].kelas);
-        System.out.println("IPK: " + arrayOfMahasiswa[0].ipk);
-        System.out.println("------------------------------");
-        System.out.println("NIM: " + arrayOfMahasiswa[1].nim);
-        System.out.println("Nama: " + arrayOfMahasiswa[1].nama);
-        System.out.println("Kelas: " + arrayOfMahasiswa[1].kelas);  
-        System.out.println("IPK: " + arrayOfMahasiswa[1].ipk);
-        System.out.println("------------------------------");
-        System.out.println("NIM: " + arrayOfMahasiswa[2].nim);
-        System.out.println("Nama: " + arrayOfMahasiswa[2].nama);
-        System.out.println("Kelas: " + arrayOfMahasiswa[2].kelas);
-        System.out.println("IPK: " + arrayOfMahasiswa[2].ipk);
-
+        // Mahasiswa[] myarrayOfMahasiswa = new Mahasiswa[3];
+        // myarrayOfMahasiswa[0].nim = "123456";
+        // myarrayOfMahasiswa[1].nama = "Budi";
+        // myarrayOfMahasiswa[2].kelas = "A";
+        // myarrayOfMahasiswa[2].ipk = (float) 3.75;
     }
 }
